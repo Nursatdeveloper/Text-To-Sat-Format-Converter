@@ -15,8 +15,8 @@ namespace TexttoSatReadingConverter.PdfService
 
         public static readonly Rectangle[] COLUMNS =
         {
-            new Rectangle(46, 56, 234, 740),
-            new Rectangle(320, 56, 234, 740)
+            new Rectangle(46, 46, 234, 710),
+            new Rectangle(320, 46, 234, 710)
         };
 
         public CustomDocumentRenderer(Document document) : base(document)
@@ -38,15 +38,20 @@ namespace TexttoSatReadingConverter.PdfService
             else
             {
                 string imgPath = @".\resources\images\continue.png";
+                string headerPath = @".\resources\images\header3.png";
                 ImageData img = ImageDataFactory.Create(imgPath);
+                ImageData header = ImageDataFactory.Create(headerPath);
 
 
                 new PdfCanvas(document.GetPdfDocument(), document.GetPdfDocument().GetNumberOfPages())
                     .MoveTo(297.5f, 36)
-                    .LineTo(297.5f, 806)
+                    .LineTo(297.5f, 750)
                     .SetLineDash(1.2f, 1.2f, 1.0f)
                     .Stroke()
                     .AddImageAt(img, 440, 20, true);
+
+                new PdfCanvas(document.GetPdfDocument(), document.GetPdfDocument().GetNumberOfPages())
+                    .AddImageAt(header, 45, 770, true);
                     
                     
             }
