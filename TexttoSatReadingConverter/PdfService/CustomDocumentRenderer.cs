@@ -38,7 +38,7 @@ namespace TexttoSatReadingConverter.PdfService
             else
             {
                 string imgPath = @".\resources\images\continue.png";
-                string headerPath = @".\resources\images\header3.png";
+                string headerPath = @".\resources\images\header.png";
                 ImageData img = ImageDataFactory.Create(imgPath);
                 ImageData header = ImageDataFactory.Create(headerPath);
 

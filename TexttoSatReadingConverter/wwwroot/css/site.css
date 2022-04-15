@@ -33,6 +33,11 @@ html {
   html {
     font-size: 16px;
   }
+    #text {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .border-top {
@@ -71,13 +76,17 @@ body {
 }
 
 .textarea_wrapper {
-    width:500px;
-    height:300px;
-    margin-left:auto;
-    margin-right:auto;
+    width:100%;
+    height:200px;
+    margin-top:30px;
 }
 
-#text{
-    width:500px;
-    height:30px;
+#text {
+    width: 60%;
+    height: 30px;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
