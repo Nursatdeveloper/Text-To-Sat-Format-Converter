@@ -1,4 +1,5 @@
 ﻿using iText.IO.Font;
+using iText.IO.Image;
 using iText.Kernel.Font;
 using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
