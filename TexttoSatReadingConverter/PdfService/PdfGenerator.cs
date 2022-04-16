@@ -18,7 +18,7 @@ namespace TexttoSatReadingConverter.PdfService
 {
     public class PdfGenerator : IPdfGenerator
     {
-        public byte[] GenerateDocument( string text )
+        public byte[] GenerateDocument(string text)
         {
 
             byte[] pdfFileBytes;
@@ -37,6 +37,7 @@ namespace TexttoSatReadingConverter.PdfService
                 doc.Add(new Paragraph(text)
                     .SetMultipliedLeading(1.0f)
                     .SetFontSize(11));
+
                 doc.Close();
                 pdfFileBytes = stream.ToArray();
 
